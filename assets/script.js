@@ -25,8 +25,8 @@ class Game{
         this.xBlockSize = canvas.width / this.nCols;
         this.yBlockSize = canvas.height / this.nRows;
 
-        this.nValues = [3,3,3,2,2,2,1,1,1,1,1,1]
-        this.speedValues = [18,17,16,15,15,14,14,13,12,11,10,10]
+        this.nValues = [4,4,4,3,3,3,2,2,2,1,1,1]
+        this.speedValues = [10,10,9,8,8,7,7,6,6,5,4,3]
 
     }
     init(){
@@ -297,6 +297,12 @@ class BlockRow{
 
 
 const game = new Game();
+
+document.addEventListener("touchstart", function (){
+    if (game.state == "playing") {
+        game.nextBlock();
+    }
+});
 
 document.body.onkeyup = function(e) {
     if (e.key == " " ||
