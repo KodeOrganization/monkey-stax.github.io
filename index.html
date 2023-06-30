@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Monkey Stax</title>
+    <link rel="preload" href="assets/TruenoBlkOl.otf" as="font" type="font/otf">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="main-container">
+    <div class="second-container">
+        <div class="modal" id="startModal">
+            <h1>Monkey <span>Stax</span></h1>
+            <p>
+                Welcome to Monkey Stax! The goal of the game is to stack the blocks as high as you can. If you miss
+                the block, you lose. If you reach the top, you win! Good luck!
+            </p>
+            <P>
+                Please input the winning prize:
+            </P>
+            <p style="width: 100%;"><span class="textarea" role="textbox" contenteditable id="prizeInput"></span></p>
+            <div>
+                <label for="blockColorInput">Block color: </label> <input type="color" value="#FF0000" id="blockColorInput">
+                <label for="backgroundColorInput">Background color: </label> <input type="color" value="#690000" id="backgroundColorInput">
+            </div>
+            <button id="playButton">Play</button>
+        </div>
+
+        <div class="modal" id="winningModal" >
+            <h1>Monkey <span>Stax</span></h1>
+            <img src="assets/cup.png">
+            <p>Congratulations!<br> You won the game!</p>
+            <p id="prizeText">My prize</p>
+            <button id="playAgainButton">Play Again</button>
+        </div>
+
+        <div class="modal" id="losingModal" >
+            <h1>Monkey <span>Stax</span></h1>
+            <img src="assets/sad.webp">
+            <p>
+                Sorry! You lost the game! <br> Try again!
+            </p>
+            <button id="playAgainButton2">Play Again</button>
+        </div>
+    </div>
+    <canvas id="backgroundCanvas"></canvas>
+    <canvas id="gameCanvas"></canvas>
+</div>
+<script src="assets/script.js"></script>
+</body>
+</html>
